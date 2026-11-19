@@ -1,0 +1,1282 @@
+{
+  "candidates": [
+    {
+      "image": "img_0002",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0006",
+      "type": "instance_merge",
+      "suspect_class": "car",
+      "note": "segment panoptic car phu 2 box cung lop"
+    },
+    {
+      "image": "img_0006",
+      "type": "class_swap",
+      "det_class": "bus",
+      "pan_class": "truck",
+      "iou": 0.904,
+      "note": "bat dong lop: detection ghi bus, panoptic ghi truck (IoU=0.90)"
+    },
+    {
+      "image": "img_0007",
+      "type": "instance_merge",
+      "suspect_class": "dog",
+      "note": "segment panoptic dog phu 2 box cung lop"
+    },
+    {
+      "image": "img_0008",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 3 box cung lop"
+    },
+    {
+      "image": "img_0010",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0014",
+      "type": "instance_merge",
+      "suspect_class": "pizza",
+      "note": "segment panoptic pizza phu 3 box cung lop"
+    },
+    {
+      "image": "img_0014",
+      "type": "instance_merge",
+      "suspect_class": "pizza",
+      "note": "segment panoptic pizza phu 3 box cung lop"
+    },
+    {
+      "image": "img_0014",
+      "type": "instance_merge",
+      "suspect_class": "pizza",
+      "note": "segment panoptic pizza phu 3 box cung lop"
+    },
+    {
+      "image": "img_0016",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 5 box cung lop"
+    },
+    {
+      "image": "img_0016",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0017",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0017",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0017",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 3 box cung lop"
+    },
+    {
+      "image": "img_0018",
+      "type": "instance_merge",
+      "suspect_class": "sink",
+      "note": "segment panoptic sink phu 2 box cung lop"
+    },
+    {
+      "image": "img_0019",
+      "type": "instance_merge",
+      "suspect_class": "truck",
+      "note": "segment panoptic truck phu 3 box cung lop"
+    },
+    {
+      "image": "img_0019",
+      "type": "instance_merge",
+      "suspect_class": "truck",
+      "note": "segment panoptic truck phu 4 box cung lop"
+    },
+    {
+      "image": "img_0020",
+      "type": "instance_merge",
+      "suspect_class": "skateboard",
+      "note": "segment panoptic skateboard phu 3 box cung lop"
+    },
+    {
+      "image": "img_0022",
+      "type": "instance_merge",
+      "suspect_class": "book",
+      "note": "segment panoptic book phu 2 box cung lop"
+    },
+    {
+      "image": "img_0023",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0026",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0026",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0026",
+      "type": "instance_merge",
+      "suspect_class": "wine glass",
+      "note": "segment panoptic wine glass phu 2 box cung lop"
+    },
+    {
+      "image": "img_0026",
+      "type": "instance_merge",
+      "suspect_class": "cup",
+      "note": "segment panoptic cup phu 2 box cung lop"
+    },
+    {
+      "image": "img_0027",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0028",
+      "type": "class_swap",
+      "det_class": "bicycle",
+      "pan_class": "motorcycle",
+      "iou": 0.996,
+      "note": "bat dong lop: detection ghi bicycle, panoptic ghi motorcycle (IoU=1.00)"
+    },
+    {
+      "image": "img_0034",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0034",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0034",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0034",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0034",
+      "type": "instance_merge",
+      "suspect_class": "bottle",
+      "note": "segment panoptic bottle phu 2 box cung lop"
+    },
+    {
+      "image": "img_0034",
+      "type": "instance_merge",
+      "suspect_class": "bottle",
+      "note": "segment panoptic bottle phu 2 box cung lop"
+    },
+    {
+      "image": "img_0034",
+      "type": "instance_merge",
+      "suspect_class": "wine glass",
+      "note": "segment panoptic wine glass phu 2 box cung lop"
+    },
+    {
+      "image": "img_0036",
+      "type": "class_swap",
+      "det_class": "bed",
+      "pan_class": "couch",
+      "iou": 0.933,
+      "note": "bat dong lop: detection ghi bed, panoptic ghi couch (IoU=0.93)"
+    },
+    {
+      "image": "img_0045",
+      "type": "class_swap",
+      "det_class": "handbag",
+      "pan_class": "backpack",
+      "iou": 0.878,
+      "note": "bat dong lop: detection ghi handbag, panoptic ghi backpack (IoU=0.88)"
+    },
+    {
+      "image": "img_0047",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0050",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0051",
+      "type": "instance_merge",
+      "suspect_class": "cow",
+      "note": "segment panoptic cow phu 2 box cung lop"
+    },
+    {
+      "image": "img_0051",
+      "type": "instance_merge",
+      "suspect_class": "cow",
+      "note": "segment panoptic cow phu 2 box cung lop"
+    },
+    {
+      "image": "img_0051",
+      "type": "instance_merge",
+      "suspect_class": "cow",
+      "note": "segment panoptic cow phu 2 box cung lop"
+    },
+    {
+      "image": "img_0052",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0053",
+      "type": "instance_merge",
+      "suspect_class": "bowl",
+      "note": "segment panoptic bowl phu 2 box cung lop"
+    },
+    {
+      "image": "img_0061",
+      "type": "class_swap",
+      "det_class": "cake",
+      "pan_class": "donut",
+      "iou": 0.992,
+      "note": "bat dong lop: detection ghi cake, panoptic ghi donut (IoU=0.99)"
+    },
+    {
+      "image": "img_0062",
+      "type": "class_swap",
+      "det_class": "truck",
+      "pan_class": "car",
+      "iou": 0.946,
+      "note": "bat dong lop: detection ghi truck, panoptic ghi car (IoU=0.95)"
+    },
+    {
+      "image": "img_0062",
+      "type": "class_swap",
+      "det_class": "truck",
+      "pan_class": "car",
+      "iou": 0.903,
+      "note": "bat dong lop: detection ghi truck, panoptic ghi car (IoU=0.90)"
+    },
+    {
+      "image": "img_0063",
+      "type": "missing_box",
+      "pan_class": "bed",
+      "area": 123865,
+      "note": "segment bed dien tich lon (123865 px) nhung thieu box detection"
+    },
+    {
+      "image": "img_0065",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 5 box cung lop"
+    },
+    {
+      "image": "img_0074",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0074",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0079",
+      "type": "missing_box",
+      "pan_class": "cat",
+      "area": 38450,
+      "note": "segment cat dien tich lon (38450 px) nhung thieu box detection"
+    },
+    {
+      "image": "img_0084",
+      "type": "instance_merge",
+      "suspect_class": "truck",
+      "note": "segment panoptic truck phu 2 box cung lop"
+    },
+    {
+      "image": "img_0086",
+      "type": "class_swap",
+      "det_class": "chair",
+      "pan_class": "dining table",
+      "iou": 0.896,
+      "note": "bat dong lop: detection ghi chair, panoptic ghi dining table (IoU=0.90)"
+    },
+    {
+      "image": "img_0087",
+      "type": "instance_merge",
+      "suspect_class": "knife",
+      "note": "segment panoptic knife phu 2 box cung lop"
+    },
+    {
+      "image": "img_0094",
+      "type": "instance_merge",
+      "suspect_class": "zebra",
+      "note": "segment panoptic zebra phu 2 box cung lop"
+    },
+    {
+      "image": "img_0094",
+      "type": "instance_merge",
+      "suspect_class": "zebra",
+      "note": "segment panoptic zebra phu 2 box cung lop"
+    },
+    {
+      "image": "img_0097",
+      "type": "instance_merge",
+      "suspect_class": "car",
+      "note": "segment panoptic car phu 2 box cung lop"
+    },
+    {
+      "image": "img_0100",
+      "type": "instance_merge",
+      "suspect_class": "skis",
+      "note": "segment panoptic skis phu 2 box cung lop"
+    },
+    {
+      "image": "img_0100",
+      "type": "instance_merge",
+      "suspect_class": "skis",
+      "note": "segment panoptic skis phu 2 box cung lop"
+    },
+    {
+      "image": "img_0101",
+      "type": "instance_merge",
+      "suspect_class": "car",
+      "note": "segment panoptic car phu 2 box cung lop"
+    },
+    {
+      "image": "img_0101",
+      "type": "instance_merge",
+      "suspect_class": "car",
+      "note": "segment panoptic car phu 2 box cung lop"
+    },
+    {
+      "image": "img_0101",
+      "type": "instance_merge",
+      "suspect_class": "car",
+      "note": "segment panoptic car phu 3 box cung lop"
+    },
+    {
+      "image": "img_0101",
+      "type": "instance_merge",
+      "suspect_class": "car",
+      "note": "segment panoptic car phu 3 box cung lop"
+    },
+    {
+      "image": "img_0101",
+      "type": "instance_merge",
+      "suspect_class": "car",
+      "note": "segment panoptic car phu 3 box cung lop"
+    },
+    {
+      "image": "img_0102",
+      "type": "instance_merge",
+      "suspect_class": "backpack",
+      "note": "segment panoptic backpack phu 2 box cung lop"
+    },
+    {
+      "image": "img_0104",
+      "type": "instance_merge",
+      "suspect_class": "book",
+      "note": "segment panoptic book phu 2 box cung lop"
+    },
+    {
+      "image": "img_0104",
+      "type": "instance_merge",
+      "suspect_class": "book",
+      "note": "segment panoptic book phu 3 box cung lop"
+    },
+    {
+      "image": "img_0104",
+      "type": "instance_merge",
+      "suspect_class": "book",
+      "note": "segment panoptic book phu 2 box cung lop"
+    },
+    {
+      "image": "img_0104",
+      "type": "instance_merge",
+      "suspect_class": "book",
+      "note": "segment panoptic book phu 3 box cung lop"
+    },
+    {
+      "image": "img_0104",
+      "type": "instance_merge",
+      "suspect_class": "book",
+      "note": "segment panoptic book phu 3 box cung lop"
+    },
+    {
+      "image": "img_0104",
+      "type": "instance_merge",
+      "suspect_class": "book",
+      "note": "segment panoptic book phu 2 box cung lop"
+    },
+    {
+      "image": "img_0106",
+      "type": "class_swap",
+      "det_class": "cat",
+      "pan_class": "dog",
+      "iou": 0.917,
+      "note": "bat dong lop: detection ghi cat, panoptic ghi dog (IoU=0.92)"
+    },
+    {
+      "image": "img_0109",
+      "type": "instance_merge",
+      "suspect_class": "bird",
+      "note": "segment panoptic bird phu 2 box cung lop"
+    },
+    {
+      "image": "img_0112",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0112",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0112",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0113",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0113",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0113",
+      "type": "instance_merge",
+      "suspect_class": "banana",
+      "note": "segment panoptic banana phu 2 box cung lop"
+    },
+    {
+      "image": "img_0115",
+      "type": "class_swap",
+      "det_class": "cup",
+      "pan_class": "bowl",
+      "iou": 0.969,
+      "note": "bat dong lop: detection ghi cup, panoptic ghi bowl (IoU=0.97)"
+    },
+    {
+      "image": "img_0117",
+      "type": "bbox_drift",
+      "det_class": "elephant",
+      "iou": 0.485,
+      "note": "box elephant bi lech khoi segment (IoU=0.48)"
+    },
+    {
+      "image": "img_0119",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0119",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0119",
+      "type": "bbox_drift",
+      "det_class": "person",
+      "iou": 0.217,
+      "note": "box person bi lech khoi segment (IoU=0.22)"
+    },
+    {
+      "image": "img_0120",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 4 box cung lop"
+    },
+    {
+      "image": "img_0120",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 3 box cung lop"
+    },
+    {
+      "image": "img_0120",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0120",
+      "type": "class_swap",
+      "det_class": "backpack",
+      "pan_class": "handbag",
+      "iou": 0.924,
+      "note": "bat dong lop: detection ghi backpack, panoptic ghi handbag (IoU=0.92)"
+    },
+    {
+      "image": "img_0122",
+      "type": "instance_merge",
+      "suspect_class": "car",
+      "note": "segment panoptic car phu 2 box cung lop"
+    },
+    {
+      "image": "img_0123",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0127",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 3 box cung lop"
+    },
+    {
+      "image": "img_0127",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0129",
+      "type": "instance_merge",
+      "suspect_class": "carrot",
+      "note": "segment panoptic carrot phu 2 box cung lop"
+    },
+    {
+      "image": "img_0129",
+      "type": "instance_merge",
+      "suspect_class": "carrot",
+      "note": "segment panoptic carrot phu 3 box cung lop"
+    },
+    {
+      "image": "img_0131",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0131",
+      "type": "instance_merge",
+      "suspect_class": "motorcycle",
+      "note": "segment panoptic motorcycle phu 4 box cung lop"
+    },
+    {
+      "image": "img_0131",
+      "type": "instance_merge",
+      "suspect_class": "motorcycle",
+      "note": "segment panoptic motorcycle phu 2 box cung lop"
+    },
+    {
+      "image": "img_0131",
+      "type": "instance_merge",
+      "suspect_class": "motorcycle",
+      "note": "segment panoptic motorcycle phu 2 box cung lop"
+    },
+    {
+      "image": "img_0131",
+      "type": "instance_merge",
+      "suspect_class": "motorcycle",
+      "note": "segment panoptic motorcycle phu 2 box cung lop"
+    },
+    {
+      "image": "img_0131",
+      "type": "instance_merge",
+      "suspect_class": "motorcycle",
+      "note": "segment panoptic motorcycle phu 3 box cung lop"
+    },
+    {
+      "image": "img_0131",
+      "type": "instance_merge",
+      "suspect_class": "motorcycle",
+      "note": "segment panoptic motorcycle phu 3 box cung lop"
+    },
+    {
+      "image": "img_0131",
+      "type": "instance_merge",
+      "suspect_class": "motorcycle",
+      "note": "segment panoptic motorcycle phu 4 box cung lop"
+    },
+    {
+      "image": "img_0131",
+      "type": "instance_merge",
+      "suspect_class": "motorcycle",
+      "note": "segment panoptic motorcycle phu 4 box cung lop"
+    },
+    {
+      "image": "img_0131",
+      "type": "instance_merge",
+      "suspect_class": "motorcycle",
+      "note": "segment panoptic motorcycle phu 2 box cung lop"
+    },
+    {
+      "image": "img_0131",
+      "type": "instance_merge",
+      "suspect_class": "truck",
+      "note": "segment panoptic truck phu 2 box cung lop"
+    },
+    {
+      "image": "img_0131",
+      "type": "class_swap",
+      "det_class": "truck",
+      "pan_class": "car",
+      "iou": 0.692,
+      "note": "bat dong lop: detection ghi truck, panoptic ghi car (IoU=0.69)"
+    },
+    {
+      "image": "img_0133",
+      "type": "instance_merge",
+      "suspect_class": "elephant",
+      "note": "segment panoptic elephant phu 2 box cung lop"
+    },
+    {
+      "image": "img_0136",
+      "type": "instance_merge",
+      "suspect_class": "car",
+      "note": "segment panoptic car phu 2 box cung lop"
+    },
+    {
+      "image": "img_0136",
+      "type": "instance_merge",
+      "suspect_class": "car",
+      "note": "segment panoptic car phu 2 box cung lop"
+    },
+    {
+      "image": "img_0136",
+      "type": "instance_merge",
+      "suspect_class": "car",
+      "note": "segment panoptic car phu 2 box cung lop"
+    },
+    {
+      "image": "img_0137",
+      "type": "instance_merge",
+      "suspect_class": "car",
+      "note": "segment panoptic car phu 2 box cung lop"
+    },
+    {
+      "image": "img_0139",
+      "type": "instance_merge",
+      "suspect_class": "book",
+      "note": "segment panoptic book phu 2 box cung lop"
+    },
+    {
+      "image": "img_0143",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 3 box cung lop"
+    },
+    {
+      "image": "img_0143",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0143",
+      "type": "instance_merge",
+      "suspect_class": "dining table",
+      "note": "segment panoptic dining table phu 2 box cung lop"
+    },
+    {
+      "image": "img_0143",
+      "type": "instance_merge",
+      "suspect_class": "dining table",
+      "note": "segment panoptic dining table phu 2 box cung lop"
+    },
+    {
+      "image": "img_0145",
+      "type": "instance_merge",
+      "suspect_class": "car",
+      "note": "segment panoptic car phu 3 box cung lop"
+    },
+    {
+      "image": "img_0145",
+      "type": "class_swap",
+      "det_class": "couch",
+      "pan_class": "chair",
+      "iou": 0.971,
+      "note": "bat dong lop: detection ghi couch, panoptic ghi chair (IoU=0.97)"
+    },
+    {
+      "image": "img_0146",
+      "type": "instance_merge",
+      "suspect_class": "truck",
+      "note": "segment panoptic truck phu 2 box cung lop"
+    },
+    {
+      "image": "img_0146",
+      "type": "class_swap",
+      "det_class": "truck",
+      "pan_class": "car",
+      "iou": 0.967,
+      "note": "bat dong lop: detection ghi truck, panoptic ghi car (IoU=0.97)"
+    },
+    {
+      "image": "img_0149",
+      "type": "instance_merge",
+      "suspect_class": "elephant",
+      "note": "segment panoptic elephant phu 2 box cung lop"
+    },
+    {
+      "image": "img_0149",
+      "type": "instance_merge",
+      "suspect_class": "elephant",
+      "note": "segment panoptic elephant phu 2 box cung lop"
+    },
+    {
+      "image": "img_0150",
+      "type": "instance_merge",
+      "suspect_class": "giraffe",
+      "note": "segment panoptic giraffe phu 2 box cung lop"
+    },
+    {
+      "image": "img_0150",
+      "type": "instance_merge",
+      "suspect_class": "giraffe",
+      "note": "segment panoptic giraffe phu 2 box cung lop"
+    },
+    {
+      "image": "img_0151",
+      "type": "instance_merge",
+      "suspect_class": "apple",
+      "note": "segment panoptic apple phu 2 box cung lop"
+    },
+    {
+      "image": "img_0151",
+      "type": "instance_merge",
+      "suspect_class": "apple",
+      "note": "segment panoptic apple phu 2 box cung lop"
+    },
+    {
+      "image": "img_0151",
+      "type": "instance_merge",
+      "suspect_class": "apple",
+      "note": "segment panoptic apple phu 2 box cung lop"
+    },
+    {
+      "image": "img_0152",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 3 box cung lop"
+    },
+    {
+      "image": "img_0154",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0154",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0156",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0156",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0159",
+      "type": "instance_merge",
+      "suspect_class": "zebra",
+      "note": "segment panoptic zebra phu 2 box cung lop"
+    },
+    {
+      "image": "img_0163",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 3 box cung lop"
+    },
+    {
+      "image": "img_0164",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 3 box cung lop"
+    },
+    {
+      "image": "img_0165",
+      "type": "instance_merge",
+      "suspect_class": "skis",
+      "note": "segment panoptic skis phu 2 box cung lop"
+    },
+    {
+      "image": "img_0169",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0169",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 3 box cung lop"
+    },
+    {
+      "image": "img_0169",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0169",
+      "type": "instance_merge",
+      "suspect_class": "car",
+      "note": "segment panoptic car phu 2 box cung lop"
+    },
+    {
+      "image": "img_0169",
+      "type": "instance_merge",
+      "suspect_class": "car",
+      "note": "segment panoptic car phu 2 box cung lop"
+    },
+    {
+      "image": "img_0169",
+      "type": "instance_merge",
+      "suspect_class": "dining table",
+      "note": "segment panoptic dining table phu 2 box cung lop"
+    },
+    {
+      "image": "img_0169",
+      "type": "instance_merge",
+      "suspect_class": "dining table",
+      "note": "segment panoptic dining table phu 2 box cung lop"
+    },
+    {
+      "image": "img_0169",
+      "type": "class_swap",
+      "det_class": "bus",
+      "pan_class": "truck",
+      "iou": 0.824,
+      "note": "bat dong lop: detection ghi bus, panoptic ghi truck (IoU=0.82)"
+    },
+    {
+      "image": "img_0171",
+      "type": "instance_merge",
+      "suspect_class": "backpack",
+      "note": "segment panoptic backpack phu 2 box cung lop"
+    },
+    {
+      "image": "img_0171",
+      "type": "missing_box",
+      "pan_class": "backpack",
+      "area": 1624,
+      "note": "segment backpack dien tich lon (1624 px) nhung thieu box detection"
+    },
+    {
+      "image": "img_0173",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0173",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0178",
+      "type": "instance_merge",
+      "suspect_class": "car",
+      "note": "segment panoptic car phu 2 box cung lop"
+    },
+    {
+      "image": "img_0180",
+      "type": "instance_merge",
+      "suspect_class": "traffic light",
+      "note": "segment panoptic traffic light phu 2 box cung lop"
+    },
+    {
+      "image": "img_0185",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 3 box cung lop"
+    },
+    {
+      "image": "img_0185",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0185",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0185",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0185",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 4 box cung lop"
+    },
+    {
+      "image": "img_0185",
+      "type": "instance_merge",
+      "suspect_class": "cake",
+      "note": "segment panoptic cake phu 2 box cung lop"
+    },
+    {
+      "image": "img_0187",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0187",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0188",
+      "type": "instance_merge",
+      "suspect_class": "broccoli",
+      "note": "segment panoptic broccoli phu 2 box cung lop"
+    },
+    {
+      "image": "img_0188",
+      "type": "instance_merge",
+      "suspect_class": "carrot",
+      "note": "segment panoptic carrot phu 3 box cung lop"
+    },
+    {
+      "image": "img_0191",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0191",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0191",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0196",
+      "type": "instance_merge",
+      "suspect_class": "boat",
+      "note": "segment panoptic boat phu 2 box cung lop"
+    },
+    {
+      "image": "img_0199",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0199",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0199",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0199",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0202",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0202",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 3 box cung lop"
+    },
+    {
+      "image": "img_0202",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 4 box cung lop"
+    },
+    {
+      "image": "img_0202",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0202",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0204",
+      "type": "instance_merge",
+      "suspect_class": "boat",
+      "note": "segment panoptic boat phu 2 box cung lop"
+    },
+    {
+      "image": "img_0204",
+      "type": "instance_merge",
+      "suspect_class": "boat",
+      "note": "segment panoptic boat phu 2 box cung lop"
+    },
+    {
+      "image": "img_0204",
+      "type": "instance_merge",
+      "suspect_class": "boat",
+      "note": "segment panoptic boat phu 2 box cung lop"
+    },
+    {
+      "image": "img_0210",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0213",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0213",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0213",
+      "type": "instance_merge",
+      "suspect_class": "chair",
+      "note": "segment panoptic chair phu 2 box cung lop"
+    },
+    {
+      "image": "img_0213",
+      "type": "instance_merge",
+      "suspect_class": "chair",
+      "note": "segment panoptic chair phu 2 box cung lop"
+    },
+    {
+      "image": "img_0220",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0220",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0220",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0222",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0226",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0226",
+      "type": "class_swap",
+      "det_class": "backpack",
+      "pan_class": "suitcase",
+      "iou": 0.916,
+      "note": "bat dong lop: detection ghi backpack, panoptic ghi suitcase (IoU=0.92)"
+    },
+    {
+      "image": "img_0232",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 3 box cung lop"
+    },
+    {
+      "image": "img_0232",
+      "type": "instance_merge",
+      "suspect_class": "bicycle",
+      "note": "segment panoptic bicycle phu 2 box cung lop"
+    },
+    {
+      "image": "img_0233",
+      "type": "instance_merge",
+      "suspect_class": "giraffe",
+      "note": "segment panoptic giraffe phu 2 box cung lop"
+    },
+    {
+      "image": "img_0237",
+      "type": "instance_merge",
+      "suspect_class": "car",
+      "note": "segment panoptic car phu 3 box cung lop"
+    },
+    {
+      "image": "img_0238",
+      "type": "class_swap",
+      "det_class": "bench",
+      "pan_class": "chair",
+      "iou": 0.972,
+      "note": "bat dong lop: detection ghi bench, panoptic ghi chair (IoU=0.97)"
+    },
+    {
+      "image": "img_0238",
+      "type": "class_swap",
+      "det_class": "couch",
+      "pan_class": "chair",
+      "iou": 0.689,
+      "note": "bat dong lop: detection ghi couch, panoptic ghi chair (IoU=0.69)"
+    },
+    {
+      "image": "img_0240",
+      "type": "instance_merge",
+      "suspect_class": "car",
+      "note": "segment panoptic car phu 2 box cung lop"
+    },
+    {
+      "image": "img_0240",
+      "type": "instance_merge",
+      "suspect_class": "car",
+      "note": "segment panoptic car phu 2 box cung lop"
+    },
+    {
+      "image": "img_0240",
+      "type": "instance_merge",
+      "suspect_class": "car",
+      "note": "segment panoptic car phu 2 box cung lop"
+    },
+    {
+      "image": "img_0244",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 3 box cung lop"
+    },
+    {
+      "image": "img_0245",
+      "type": "missing_box",
+      "pan_class": "toilet",
+      "area": 30816,
+      "note": "segment toilet dien tich lon (30816 px) nhung thieu box detection"
+    },
+    {
+      "image": "img_0247",
+      "type": "instance_merge",
+      "suspect_class": "fork",
+      "note": "segment panoptic fork phu 3 box cung lop"
+    },
+    {
+      "image": "img_0247",
+      "type": "instance_merge",
+      "suspect_class": "fork",
+      "note": "segment panoptic fork phu 5 box cung lop"
+    },
+    {
+      "image": "img_0247",
+      "type": "instance_merge",
+      "suspect_class": "fork",
+      "note": "segment panoptic fork phu 4 box cung lop"
+    },
+    {
+      "image": "img_0248",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0248",
+      "type": "instance_merge",
+      "suspect_class": "person",
+      "note": "segment panoptic person phu 2 box cung lop"
+    },
+    {
+      "image": "img_0249",
+      "type": "instance_merge",
+      "suspect_class": "giraffe",
+      "note": "segment panoptic giraffe phu 2 box cung lop"
+    },
+    {
+      "image": "img_0250",
+      "type": "instance_merge",
+      "suspect_class": "banana",
+      "note": "segment panoptic banana phu 2 box cung lop"
+    },
+    {
+      "image": "img_0250",
+      "type": "instance_merge",
+      "suspect_class": "banana",
+      "note": "segment panoptic banana phu 2 box cung lop"
+    },
+    {
+      "image": "img_0250",
+      "type": "instance_merge",
+      "suspect_class": "banana",
+      "note": "segment panoptic banana phu 3 box cung lop"
+    }
+  ]
+}
