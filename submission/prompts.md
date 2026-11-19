@@ -1,5 +1,11 @@
-# Dùng AI
+# Dùng AI trong Lab Day 10 — Nhóm 05
+
+Dưới đây là nhật ký sử dụng các mô hình AI hỗ trợ trong quá trình thực hiện bài thực hành Bàn giao Dataset & Truy vết của Nhóm 05:
 
 | # | Ai dùng | Công cụ | Prompt (tóm tắt) | AI sai ở đâu | Nhóm kiểm lại thế nào |
 |---|---|---|---|---|---|
-| 1 | <<>> | <<>> | <<>> | <<>> | <<>> |
+| 1 | Nguyễn Bá Duy | Antigravity (Gemini 2.5) | "Viết `validator/validate.py` kiểm tra 9 lỗi luật COCO không dùng thư viện ngoài ngoại trừ `scripts/pngutil.py`" | AI ban đầu định import thư viện `shapely` và `cv2` để tính diện tích polygon và đọc mask; đồng thời tính hash manifest sai quy cách | Nhóm nhắc lại ràng buộc chỉ dùng Python chuẩn; chạy thử nghiệm trên lô sạch `runs/clean` (ra 0 lỗi luật) và test trên `runs/r5007` đạt **F1 lỗi luật = 1.0** |
+| 2 | Hoàng Nhật Anh | Antigravity | "Viết script đối chiếu phát hiện bất đồng lớp giữa bounding box detection và segment panoptic" | AI so sánh chuỗi phân loại trực tiếp nhưng không xử lý trường hợp class_id vượt quá 79 (gặp lỗi invalid_class làm crash script) | Nhóm thêm điều kiện kiểm tra biên `0 <= class_id < len(class_names)` và chạy thử trên toàn bộ 250 ảnh an toàn |
+| 3 | Phạm Mạnh Hùng | Antigravity | "Hỗ trợ xây dựng giao diện HTML trực quan xem ảnh ứng viên và vẽ box phân đoạn" | AI ban đầu định chèn thư viện Pillow vào validator; khi tạo HTML thì đặt sai đường dẫn tương đối dẫn đến ảnh bị vỡ | Nhóm tách thành script độc lập `scripts/visualize_helper.py`, sửa lại toàn bộ đường dẫn ảnh và nạp sẵn 19 dòng review vào giao diện |
+| 4 | Đỗ Huy Kiên | Antigravity | "Viết logic truy vết blast radius (tier_a, tier_b, notify) cho ticket đội AI phản ánh" | AI lấy guideline trực tiếp từ `metadata.json` của từng ảnh thay vì tra cứu theo `jobs.csv`, dẫn đến sai lệch do ảnh có lỗi `guideline_mismatch` | Nhóm sửa code để ánh xạ `job_id -> jobs.csv -> guideline`, đối chiếu lại với `changelog.md` và xác thực đạt **F1 truy vết = 1.0** |
+| 5 | Nguyễn Đức Cường | Antigravity | "Xây dựng gói bàn giao v2 tự động thỏa mãn các tiêu chí kiểm tra của `check_handover.py`" | AI tạo `label_summary.csv` chứa cả các lớp có số lượng bằng 0, khiến `check_handover.py` kiểm tra từ điển bị lệch tại tiêu chí H9 | Nhóm debug source code `check_handover.py`, điều chỉnh logic chỉ đếm các lớp hiện diện thực tế, đạt chuẩn **17/17 PASS** tuyệt đối |

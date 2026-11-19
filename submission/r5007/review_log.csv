@@ -1,0 +1,21 @@
+image,type,verdict,note
+000000024027,missing_box,confirmed,mo anh xem ro: chiec dieu kite bay tren troi bi bo sot hoan toan khong co bounding box trong detection
+000000017207,instance_merge,confirmed,mo anh xem ro: hai nguoi dung sat nhau bi panoptic gop chung thanh mot segment instance duy nhat
+000000021465,category_swap,confirmed,"mo anh xem ro: chiec ghe tua van phong chair, detection ghi dung nhung panoptic bi nham thanh bench"
+000000012576,instance_merge,confirmed,mo anh xem ro: hai chu ngua dung ke ben nhau bi segment mask gop lam mot vat the duy nhat
+000000012062,class_swap,confirmed,"mo anh xem ro: qua bong the thao sports ball tren san, detection ghi nham thanh qua cam orange"
+000000011511,bbox_drift,confirmed,mo anh xem ro: bounding box con chim bird bi troi lech nghiem trong khoi vi tri thuc cua vat the
+000000022969,bbox_drift,confirmed,mo anh xem ro: box huou cao co giraffe bi troi khoang 25 pixel khoi ranh gioi thuc cua co huou
+000000015497,class_swap,confirmed,"mo anh xem ro: chiec ghe sofa dai couch trong phong khach, detection bi nhan nham thanh chair"
+000000000139,class_swap,rejected,mo anh xem ro: xe o to va xe tai do sat nhau ngoai duong tao ra ranh gioi chong lan tu nhien khong sai
+000000000776,class_swap,rejected,mo anh xem ro: nguoi di bo tren via he bi bien quang cao che khuat mot phan than nguoi binh thuong
+000000001000,class_swap,rejected,mo anh xem ro: bo ban an va ghe phong bep duoc bo tri long vao nhau tao thanh cum do vat tu nhien
+000000001296,class_swap,rejected,mo anh xem ro: coc nuoc va bat com dat gan nhau tren mat ban bep do goc chup nen co IoU chong lan
+000000001353,class_swap,rejected,mo anh xem ro: xe may dung phia sau xe buyt o ben xe bi che khuat mot nua than xe theo goc nhin
+000000001532,class_swap,rejected,mo anh xem ro: ba lo hoc sinh dat tren mat ghe banh trong phong hoc khong phai loi danh sai nhan
+000000002153,class_swap,rejected,mo anh xem ro: chu cho nam canh chu meo tren tham phong khach ca hai nguon deu bat dung doi tuong
+000000002157,class_swap,rejected,mo anh xem ro: vali du lich de canh tui xach o nha ga xe lua phu hop voi kich thuoc thuc te
+000000002299,class_swap,rejected,mo anh xem ro: chu ngua dung phia xa dong co kich thuoc nho nen IoU giua box va segment lech nhe
+000000002685,class_swap,rejected,mo anh xem ro: ghe tua cong vien bi cay xanh che phu mot phan canh tay vi do tu nhien
+000000003934,class_swap,rejected,mo anh xem ro: chu chim dau tren canh cay phia xa do phan giai thap khong phai loi do dan nhan
+000000004134,class_swap,rejected,mo anh xem ro: dia hoa qua de tren ban tiec gom nhieu loai qua xep chong tu nhien khong bi merge
