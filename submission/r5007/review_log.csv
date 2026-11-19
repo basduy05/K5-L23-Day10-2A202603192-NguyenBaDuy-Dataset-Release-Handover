@@ -1,0 +1,13 @@
+image,type,verdict,note
+000000012062,class_swap,confirmed,"nhin anh: qua bong the thao mau trang nam tren bai co canh dan cuu, detection ghi nham thanh orange; panoptic dung"
+000000015497,class_swap,confirmed,"nhin anh: chiec ghe sofa dai mem co meo nam ngu phia tren, detection ghi nham chair; panoptic ghi couch dung"
+000000021465,category_swap,confirmed,"nhin anh: chiec ghe go mot cho ngoi dat canh ban phong khach, detection ghi chair dung; panoptic ghi nham bench"
+000000011511,bbox_drift,confirmed,"nhin anh: nguoi phu nu mac ao khoac di bo ben le duong, khung box detection bi lech han ve phia tay phai"
+000000022969,bbox_drift,confirmed,"nhin anh: chu huou cao co dung canh hang cay, toa do box detection bi troi tut xuong phia duoi chan huou"
+000000024027,missing_box,confirmed,"nhin anh: con dieu lon nhieu mau sac bay tren troi bai bien, detection bo sot box kite hoan toan"
+000000017207,instance_merge,confirmed,"nhin anh: hai chiec oto con di song song tren pho, panoptic gop ca hai xe thanh mot segment duy nhat"
+000000012576,instance_merge,confirmed,"nhin anh: tren ban tiec co nhieu coc uong nuoc, panoptic da gop hai chiec coc canh nhau thanh mot instance"
+000000000632,class_swap,rejected,"nhin anh: chiec ghe nho canh chau cay phong ngu bi chen chuc, detection ghi dung theo vat the that"
+000000000872,missing_box,rejected,"nhin anh: cau thu bat bong bi nguoi danh bong che khuat phan lon, box detection khong ghi la hop ly"
+000000001818,instance_merge,rejected,"nhin anh: hai con ngua van dung che khuat than nhau gan mep anh, panoptic phan tach tu nhien"
+000000005001,bbox_drift,rejected,"nhin anh: ba nguoi dung sat nhau trong buoi tiec, box detection om vua van nguoi dung dau"
