@@ -1,0 +1,64 @@
+{
+  "delivery": "runs\\clean\\delivery",
+  "image_count": 50,
+  "meaning": "Candidate workload only; this does not measure recall or semantic F1.",
+  "profiles": {
+    "sensitive": {
+      "thresholds": {
+        "class_iou": 0.4,
+        "class_containment": 0.8,
+        "drift_containment": 0.9,
+        "min_match_iou": 0.15,
+        "min_drift_box_fraction": 0.005,
+        "min_segment_pixels": 256,
+        "min_segment_fraction": 0.002,
+        "merge_union_containment": 0.7,
+        "merge_exclusive_fraction": 0.1,
+        "merge_max_box_iou": 0.45
+      },
+      "candidate_records": 4,
+      "candidate_images": 4,
+      "by_type": {
+        "instance_merge": 4
+      }
+    },
+    "balanced": {
+      "thresholds": {
+        "class_iou": 0.45,
+        "class_containment": 0.8,
+        "drift_containment": 0.85,
+        "min_match_iou": 0.15,
+        "min_drift_box_fraction": 0.005,
+        "min_segment_pixels": 256,
+        "min_segment_fraction": 0.002,
+        "merge_union_containment": 0.8,
+        "merge_exclusive_fraction": 0.15,
+        "merge_max_box_iou": 0.45
+      },
+      "candidate_records": 2,
+      "candidate_images": 2,
+      "by_type": {
+        "instance_merge": 2
+      }
+    },
+    "strict": {
+      "thresholds": {
+        "class_iou": 0.55,
+        "class_containment": 0.8,
+        "drift_containment": 0.75,
+        "min_match_iou": 0.15,
+        "min_drift_box_fraction": 0.005,
+        "min_segment_pixels": 256,
+        "min_segment_fraction": 0.002,
+        "merge_union_containment": 0.9,
+        "merge_exclusive_fraction": 0.2,
+        "merge_max_box_iou": 0.45
+      },
+      "candidate_records": 1,
+      "candidate_images": 1,
+      "by_type": {
+        "instance_merge": 1
+      }
+    }
+  }
+}

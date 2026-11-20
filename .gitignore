@@ -8,3 +8,6 @@ __pycache__/
 *.zip
 /hidden
 /delivery
+
+# Huong dan ca nhan, chi giu tren may
+/HUONG_DAN_LAB_LOCAL.md

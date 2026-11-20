@@ -1,0 +1,42 @@
+{
+  "seed": 5007,
+  "method": "mask pixels + bbox IoU; candidate workload, not F1",
+  "lots": {
+    "clean": {
+      "release_id": "lab250_9144bc8fd60b",
+      "rule_count": 0,
+      "candidate_records": 2,
+      "candidate_images": 2,
+      "by_type": {
+        "instance_merge": 2
+      },
+      "rule_output_matches_baseline": true,
+      "candidates_sha256": "cd64fc8f369d4cb9dc5a122a9d32ddbf25ac47ca50b0a8991fbc2071eb826dd6"
+    },
+    "r5007": {
+      "release_id": "lab250_afa095a47015",
+      "rule_count": 10,
+      "candidate_records": 25,
+      "candidate_images": 21,
+      "by_type": {
+        "bbox_drift": 2,
+        "class_swap": 8,
+        "instance_merge": 12,
+        "missing_box": 3
+      },
+      "rule_output_matches_baseline": true,
+      "candidates_sha256": "bffbd0bbbef7851f1770c0b055f774f3e9e5edb416447b7f01a3b78a5a615c01"
+    }
+  },
+  "clean_bbox_only_baseline": {
+    "candidate_records": 52,
+    "candidate_images": 22
+  },
+  "f1": null,
+  "f1_reason": "Practice queue has not yet been fully reviewed by humans; no final merged errors or score claimed.",
+  "code_sha256": {
+    "validator/validate.py": "31e76464900142b971bf3052d74110c327795926c1e275bb1f13cb0e59c14490",
+    "validator/cross_check.py": "72e87d40944f3930bc842104ae32e59a54595ea5cef1d185d9cb03aecd0aa7c2",
+    "validator/benchmark_cross_check.py": "1f45363bce9925e9374d19f99cbad752e525903bc3d0fb22ce946cfb0b424cef"
+  }
+}

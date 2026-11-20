@@ -228,123 +228,14 @@ class DeliveryValidator:
         return errors
 
     def find_candidates(self) -> list[dict]:
-        """Đối chiếu Detection ↔ Panoptic để tìm ứng viên lỗi ngữ nghĩa (Semantic candidates)."""
-        candidates = []
-
-        for name, item in self.manifest.items():
-            img_path = self.delivery_dir / item["image"]
-            label_path = self.delivery_dir / item["label"]
-            mask_path = self.delivery_dir / item["mask"]
-
-            if not img_path.is_file() or not label_path.is_file() or not mask_path.is_file():
-                continue
-
-            # Tìm panoptic image_id
-            image_id = None
-            im_w, im_h = 640, 480
-            for iid, im_info in self.pan_images.items():
-                if Path(im_info["file_name"]).stem == name or im_info["file_name"] == f"{name}.jpg":
-                    image_id = iid
-                    im_w, im_h = im_info["width"], im_info["height"]
-                    break
-
-            if image_id is None or image_id not in self.pan_annotations:
-                continue
-
-            ann = self.pan_annotations[image_id]
-            segments = [s for s in ann.get("segments_info", []) if s["category_id"] in self.things_cat_ids and not s.get("iscrowd")]
-
-            # Đọc boxes detection
-            boxes = []
-            for line in label_path.read_text(encoding="utf-8").splitlines():
-                parts = line.strip().split()
-                if len(parts) >= 5:
-                    try:
-                        c = int(float(parts[0]))
-                        if 0 <= c < len(self.class_names):
-                            x, y, w, h = float(parts[1]), float(parts[2]), float(parts[3]), float(parts[4])
-                            boxes.append({
-                                "class_id": c,
-                                "class_name": self.class_names[c],
-                                "px_box": [(x - w / 2) * im_w, (y - h / 2) * im_h, w * im_w, h * im_h],
-                                "norm_box": [x, y, w, h],
-                                "area": w * h
-                            })
-                    except ValueError:
-                        pass
-
-            # 1. Tìm instance_merge: 1 segment bao phủ 2 box cùng class
-            for s in segments:
-                s_box = s["bbox"]
-                s_name = self.categories[s["category_id"]]["name"]
-                same_class_boxes = [b for b in boxes if b["class_name"] == s_name]
-                enclosed = []
-                for b in same_class_boxes:
-                    bx, by, bw, bh = b["px_box"]
-                    # Kiểm tra tâm box nằm trong segment bbox
-                    cx, cy = bx + bw / 2, by + bh / 2
-                    if s_box[0] <= cx <= s_box[0] + s_box[2] and s_box[1] <= cy <= s_box[1] + s_box[3]:
-                        enclosed.append(b)
-                if len(enclosed) >= 2 and s.get("area", 0) >= 500:
-                    candidates.append({
-                        "image": name,
-                        "type": "instance_merge",
-                        "suspect_class": s_name,
-                        "note": f"segment panoptic {s_name} phu {len(enclosed)} box cung lop"
-                    })
-
-            # 2. Ghép từng box với segment
-            matched_segments = set()
-            for b in boxes:
-                best_iou = 0.0
-                best_seg = None
-                for s in segments:
-                    iou = bbox_iou(b["px_box"], s["bbox"])
-                    if iou > best_iou:
-                        best_iou = iou
-                        best_seg = s
-
-                if best_seg:
-                    seg_name = self.categories[best_seg["category_id"]]["name"]
-                    # Kiểm tra class_swap hoặc category_swap: trùng vị trí cao nhưng khác lớp
-                    if best_iou > 0.4 and b["class_name"] != seg_name:
-                        candidates.append({
-                            "image": name,
-                            "type": "class_swap",  # hoặc category_swap (cần xem ảnh quyết định)
-                            "det_class": b["class_name"],
-                            "pan_class": seg_name,
-                            "iou": round(best_iou, 3),
-                            "note": f"bat dong lop: detection ghi {b['class_name']}, panoptic ghi {seg_name} (IoU={best_iou:.2f})"
-                        })
-                    # Kiểm tra bbox_drift: cùng lớp nhưng IoU chỉ đạt mức thấp (0.15 - 0.45) với box lớn
-                    elif b["class_name"] == seg_name and b["area"] >= 0.005:
-                        if 0.15 <= best_iou < 0.50:
-                            candidates.append({
-                                "image": name,
-                                "type": "bbox_drift",
-                                "det_class": b["class_name"],
-                                "iou": round(best_iou, 3),
-                                "note": f"box {b['class_name']} bi lech khoi segment (IoU={best_iou:.2f})"
-                            })
-                    if best_iou > 0.3:
-                        matched_segments.add(best_seg["id"])
-
-            # 3. Tìm missing_box: segment thing lớn không có box nào ghép được
-            for s in segments:
-                if s["id"] not in matched_segments and s.get("area", 0) >= 1200:
-                    s_name = self.categories[s["category_id"]]["name"]
-                    # Kiểm tra xem có box nào cùng lớp không
-                    has_box = any(b["class_name"] == s_name and bbox_iou(b["px_box"], s["bbox"]) > 0.1 for b in boxes)
-                    if not has_box:
-                        candidates.append({
-                            "image": name,
-                            "type": "missing_box",
-                            "pan_class": s_name,
-                            "area": s["area"],
-                            "note": f"segment {s_name} dien tich lon ({s['area']} px) nhung thieu box detection"
-                        })
-
-        return candidates
+        """Return review candidates using actual panoptic mask pixels."""
+        if __package__:
+            from .cross_check import find_candidates
+        else:
+            from cross_check import find_candidates
+        return find_candidates(
+            self.delivery_dir, self.manifest, self.class_names, self.panoptic_doc
+        )
 
 
 def main() -> int:
