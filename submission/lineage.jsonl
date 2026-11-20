@@ -2,5 +2,3 @@
 {"event": "train", "release_id": "lab250_43f248381e9d", "run_id": "R-021"}
 {"event": "decision", "release_id": "lab250_43f248381e9d", "decision": "HOLD"}
 {"event": "release", "release_id": "lab250_43f248381e9d_v2", "parent": "lab250_43f248381e9d"}
-{"event": "decision", "release_id": "lab250_43f248381e9d", "decision": "HOLD"}
-{"event": "release", "release_id": "lab250_43f248381e9d_v2", "parent": "lab250_43f248381e9d"}
