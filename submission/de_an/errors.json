@@ -14,11 +14,11 @@
   },
   {
    "type": "category_swap",
-   "target": "img_0145"
+   "target": "img_0006"
   },
   {
-   "type": "class_swap",
-   "target": "img_0006"
+   "type": "category_swap",
+   "target": "img_0061"
   },
   {
    "type": "class_swap",
@@ -30,7 +30,7 @@
   },
   {
    "type": "class_swap",
-   "target": "img_0061"
+   "target": "img_0045"
   },
   {
    "type": "duplicate_box",
@@ -58,7 +58,7 @@
   },
   {
    "type": "missing_box",
-   "target": "img_0171"
+   "target": "img_0245"
   },
   {
    "type": "missing_image",
