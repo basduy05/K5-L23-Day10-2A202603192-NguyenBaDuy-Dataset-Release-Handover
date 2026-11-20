@@ -1,10 +1,10 @@
 image,type,annotator,reviewer,action
-000000001993,bbox_out_of_bounds,A01,Q03,re_annotate_bbox_out_of_bounds
-000000009769,invalid_class,A04,Q01,re_annotate_invalid_class
-000000011511,bbox_drift,A03,Q01,re_annotate_bbox_drift
-000000012062,class_swap,A03,Q01,re_annotate_class_swap
-000000015497,class_swap,A05,Q03,re_annotate_class_swap
-000000020333,invalid_class,A02,Q03,re_annotate_invalid_class
-000000022969,bbox_drift,A02,Q03,re_annotate_bbox_drift
-000000023126,duplicate_box,A02,Q03,re_annotate_duplicate_box
-000000024027,missing_box,A05,Q02,re_annotate_missing_box
+000000001993,bbox_out_of_bounds,A01,Q03,"Chinh sua toa do box nam trong khung anh [0, 1]"
+000000009769,invalid_class,A04,Q01,"Gan lai nhan dung ontology [0, 79]"
+000000011511,bbox_drift,A03,Q01,Dieu chinh lai bounding box khop sat vat the
+000000012062,class_swap,A03,Q01,Kiem tra lai vat the va gan dung class detection
+000000015497,class_swap,A05,Q03,Kiem tra lai vat the va gan dung class detection
+000000020333,invalid_class,A02,Q03,"Gan lai nhan dung ontology [0, 79]"
+000000022969,bbox_drift,A02,Q03,Dieu chinh lai bounding box khop sat vat the
+000000023126,duplicate_box,A02,Q03,Xoa bo bounding box trung lap
+000000024027,missing_box,A05,Q02,Bo sung bounding box con thieu cho vat the
