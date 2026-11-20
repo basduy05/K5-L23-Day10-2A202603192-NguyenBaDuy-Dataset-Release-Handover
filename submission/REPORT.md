@@ -32,7 +32,7 @@
   - Số lượng lỗi nộp: $181$. Số lỗi đúng: $8$. Số lỗi báo sai (False Positives): $173$.
   - Độ chính xác (Precision) giảm nghiêm trọng: từ **$100\%$ ($8/8$) tụt xuống chỉ còn $\frac{8}{181} \approx 4.4\%$**!
   - Điểm F1 tương ứng sẽ tụt từ **$1.0$ xuống dưới $0.08$**, khiến nhóm mất sạch điểm chất lượng gán nhãn.
-- **Bản chất kỹ thuật:** Bộ đối chiếu thuật toán chỉ phát hiện các điểm sai lệch hình học (IoU thấp, che khuất, viền không khít). Chỉ có **mắt người (Human Review)** khi mở ảnh trực tiếp mới xác định được bản chất vật thể thực tế để loại bỏ các trường hợp lệch tự nhiên (óc nhìn nghiêng, hai vật nằm sát nhau như bàn và ghế, người bị biển báo che).
+- **Bản chất kỹ thuật:** Bộ đối chiếu thuật toán chỉ phát hiện các điểm sai lệch hình học (IoU thấp, che khuất, viền không khít). Chỉ có **mắt người (Human Review)** khi mở ảnh trực tiếp mới xác định được bản chất vật thể thực tế để loại bỏ các trường hợp lệch tự nhiên (góc nhìn nghiêng, hai vật nằm sát nhau như bàn và ghế, người bị biển báo che).
 
 ---
 
@@ -42,12 +42,12 @@
 - **Giải thích vì sao run `R-021` phải xem lại hoặc train lại:**
   - Khi thực hiện truy vết tác động (`python scripts/lineage.py impact --release-id lab250_43f248381e9d`), hệ thống cảnh báo:  
     `R-021: affected=True action=review_or_retrain`.
-  - **Nguyên nhân cốt lõi:** Quá trình huấn luyện mô hình học sâu là quá trình tối ưu hóa hàm mất mát dựa trên dữ liệu. Việc phát hành lô mới v2 không thể tự sửa chữa trọng số (weights) đã bị nhiễm độc trong mô hình `R-021`. Do lô v1 chứa nhiều nhãn sai và trôi box, mô hình `R-021` đã học các đặc trưng sai lệch. Vì vậy, bắt buộc phải audit lại toàn bộ model checkpoint hoặc tái huấn luyện (retrain) từ đầu trên lô sạch v2.
+  - **Nguyên nhân cốt lõi:** Quá trình huấn luyện mô hình học sâu là quá trình tối ưu hóa hàm mất mát dựa trên dữ liệu. Việc phát hành lô mới v2 không thể tự sửa chữa trọng số (weights) của mô hình `R-021` đã bị nhiễm độc (poisoned/corrupted) bởi $7.2\%$ nhãn sai lệch và bounding box lệch lạc trong v1. Do đó, model `R-021` bắt buộc phải được đánh giá lại trên tập validation độc lập hoặc huấn luyện lại hoàn toàn (retrain) từ lô sạch v2.
 
 ---
 
-## 4. Hash chứng minh gì, không chứng minh gì?
-- **Hash SHA256 chứng minh:**
+## 4. Hash chứng minh điều gì và KHÔNG chứng minh điều gì?
+- **Hash CHỨNG MINH:**
   - *Tính toàn vẹn dữ liệu (Data Integrity):* Chứng minh chính xác tuyệt đối rằng từng file ảnh, nhãn, mask không bị biến đổi, không bị sửa đổi trái phép hoặc không bị hỏng hóc vật lý trong quá trình truyền tải và lưu trữ.
   - *Tính bất biến (Immutability):* Cho phép kiểm toán (audit) độc lập để xác minh lô bàn giao v2 không bị ghi đè hay chỉnh sửa lén lút sau khi đã đóng gói.
 - **Hash KHÔNG chứng minh:**
@@ -57,13 +57,18 @@
 ---
 
 ## 5. Truy vết
-- **Tiêu chí tầng a (`tier_a`):**
-  - Bao gồm các ảnh nằm trong các cảnh mà đội AI gửi ticket phản ánh (`reported_scenes`), thuộc các job được giao theo **guideline cũ**, và có chứa ít nhất một box detection thuộc **lớp bị thay đổi quy tắc gán nhãn**. Đây là các ảnh gây lỗi trực tiếp cho model đang chạy.
-- **Tiêu chí tầng b (`tier_b`):**
-  - Bao gồm toàn bộ các ảnh khác trong dataset thỏa mãn điều kiện: thuộc job dùng guideline cũ và có chứa lớp bị đổi quy tắc, nhưng chưa xuất hiện trong các cảnh mà đội AI báo cáo. Đây là các ca lỗi tiềm ẩn (blast radius) cần thu hồi chủ động.
-- **Vì sao lấy guideline theo job (`jobs.csv`):**
-  - Metadata gắn ở từng ảnh có thể bị lỗi `guideline_mismatch` (ví dụ annotator làm job theo guideline v1.2 nhưng metadata ảnh bị ghi sai thành v1.3).
-  - Căn cứ pháp lý và quản trị phân công lao động là hợp đồng job trong `jobs.csv`. Do đó, truy vết bắt buộc phải dựa vào `jobs.csv` để đảm bảo tính khách quan và không bỏ sót các ảnh vi phạm.
+Công cụ: `tools/trace_query.py <delivery> --out trace.json` (thư viện chuẩn, chỉ đọc `delivery/`, không ghi cứng tên lớp, cảnh hay ảnh).
+
+- **Lớp bị đổi quy tắc:** đọc `guideline/changelog.md`. Seed 5007: `cup`, quy tắc mới từ v1.3 (cup bị che >50% hoặc ở mép ảnh vẫn phải gán box).
+- **Cảnh team AI nêu:** các `scene_id` có trong `metadata.json` xuất hiện trong `incoming/ticket.md`. Seed 5007: `scene_473`, `scene_493`.
+- **Điều kiện chung:** ảnh thuộc job có guideline cũ hơn v1.3 theo `jobs.csv` (seed 5007: J01–J04) **và** `labels/<ảnh>.txt` có ít nhất một box lớp đó.
+- **tier_a** = ảnh đạt điều kiện nằm trong cảnh ticket nêu (3 ảnh); **tier_b** = các ảnh đạt điều kiện còn lại, chưa ai báo (6 ảnh).
+- **notify** = annotator và reviewer của các job chứa ảnh tier_a/tier_b: A04, A05, Q01. Không báo hết người của mọi job cũ, vì có job cũ không có ảnh nào chứa `cup`.
+- **Kết quả tự đo (`score_findings.py`):** tier_a 1.0, tier_b 1.0, notify 1.0.
+
+**Vì sao lấy guideline theo job, không theo ảnh:** người gán làm theo guideline đang áp dụng cho job khi job được tạo, nên job mới quyết định ảnh có bị gán theo quy tắc cũ hay không. Cột guideline ghi ở từng ảnh trong `metadata.json` có thể sai, chính là lỗi `guideline_mismatch` mà validator bắt; dùng cột đó sẽ đưa nhầm hoặc bỏ sót ảnh.
+
+**Đề ẩn:** chạy cùng công cụ trên `delivery/` của đề, ra lớp `truck`, cảnh `scene_100`, `scene_777`; tier_a 3 ảnh, tier_b 3 ảnh, notify A01, A02, Q01, Q03, khớp với kết quả Duy làm độc lập.
 
 ---
 
